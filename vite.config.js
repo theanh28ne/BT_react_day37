@@ -11,4 +11,5 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  base: '/BT_react_day37/',
 })
