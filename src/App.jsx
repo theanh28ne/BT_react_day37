@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./componets/Header";
+import Header from "./components/Header";
 import EditAvatar from "./pages/EditAvatar";
 import ReactMemo from "./pages/ReactMemo";
 import UseRef from "./pages/UseRef";

@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useCallback, useState } from "react";
 
 const ChildComponent1 = memo(({ value, onIncrease }) => {
   console.log("re1");
@@ -18,7 +18,7 @@ const ChildComponent2 = memo(({ value, onIncrease }) => {
 
   return (
     <div>
-      <p>Child 1 Count: {value}</p>
+      <p>Child 2 Count: {value}</p>
       <button className="rounded-2xl border-2 p-1" onClick={onIncrease}>
         {" "}
         Increase 2
@@ -31,13 +31,13 @@ const ReactMemo = () => {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
 
-  const handleClick1 = () => {
+  const handleClick1 = useCallback(() => {
     setCount1(count1 + 1);
-  };
+  }, [count1]);
 
-  const handleClick2 = () => {
+  const handleClick2 = useCallback(() => {
     setCount2(count2 + 1);
-  };
+  }, [count2]);
 
   return (
     <div className="x-col mt-3 flex flex-col items-center justify-center gap-3">

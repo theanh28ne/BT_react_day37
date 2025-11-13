@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import TextInput from "../../componets/TextInput";
-import NewTextInput from "../../componets/NewTextInput";
+import TextInput from "../../components/TextInput";
+import NewTextInput from "../../components/NewTextInput";
 
 const UseRef = () => {
   const count = useRef(0);
